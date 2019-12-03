@@ -42,7 +42,7 @@
                     <span>
                      {% if user.is_authenticated %}
                     <a class="btn-google m-b-20" style="width:150%">
-						Username: {{ user}} <br> e-MAIL: {{ user.email}}
+						Username: {{ user.username}} <br> e-MAIL: {{ user.email}}
 					</a><form method="POST">
                         <a href="{% url 'logout' %}" class="btn-google m-b-20" style="width:100%">
 						<img src="{% static 'images/icons/icon-google.png'%}" alt="GOOGLE">

@@ -18,10 +18,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
-
-
+from django.contrib.auth.views import *
 from SocialAuthApp import views
-
 from django.contrib.auth import logout
 
 from SocialAuthProject import settings
@@ -29,7 +27,7 @@ from SocialAuthProject import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.function_socialhome, name='home'),
-    path('', include('social_django.urls', namespace='social')),
+    path('', include('social_django.urls', namespace='signedin')),
     path('signedin/', views.function_signedin, name='signedin'),
     path('logout/', views.glogout, name='logout'),
 ]
